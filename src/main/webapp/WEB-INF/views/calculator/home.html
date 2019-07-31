@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h3>Calculator</h3>
+<form method="get" action="/calculator/calculate">
+    <p>
+    First Operand:<input type="text" name="firstOperand">
+    Second Operand:<input type="text" name="secondOperand">
+    </p>
+    <p>
+        <input type="submit" name="operator" value="Addition">
+        <input type="submit" name="operator" value="Subtraction">
+        <input type="submit" name="operator" value="Multiplication">
+        <input type="submit" name="operator" value="Division">
+    </p>
+</form>
+Result: <span th:if="${result}!=f" th:text="${result}"></span>
+</body>
+</html>
